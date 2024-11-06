@@ -1,0 +1,241 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    max-height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: hsl(270, 20%, 96%);
+}
+i{
+    color: white;
+}
+.background-left{
+    width: 30vw;
+    height: 90vh;
+    position: absolute;
+    left: -10%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 45%;
+    background-image: linear-gradient( hsl(293, 100%, 63%),hsl(264, 100%, 61%)90%);
+    z-index: -999px;
+}
+.background-right{
+    width: 35vw;
+    height: 80vh;
+    position: absolute;
+    bottom: 0;
+    right: -15%;
+    border-top-left-radius: 45%;
+    border-top-right-radius: 50%;
+    background-color:hsl(289, 100%, 72%);
+    opacity: .05;
+}
+.phone{
+    width: 250px;
+    height: fit-content;
+    margin: auto;
+    border-radius: 2rem;
+    border: 10px solid white;
+    position: absolute;
+    left: 14.5%;
+    top: 10%;
+    bottom: 10%;
+    background-color: hsl(270, 20%, 96%);
+}
+ .profile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient( to left, hsl(293, 100%, 63%),hsl(264, 100%, 61%)90%);
+    padding-top: 20px;
+    border-radius: 1rem 1rem .5rem .5rem;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 10px;
+ }
+ .profile::before{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 25px;
+    background-color: white;
+    border-radius: 0px 0px 1rem 1rem;
+ }
+ .profile-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .profile-info i{
+    width: 15px;
+    height: 15px;
+    margin-right: .5rem;
+ }
+ .profile-info img{
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: 1px solid white;
+    margin-right: .5rem;
+ }
+ .profile-info .profile-details{
+    color: white;
+    width: 110%;
+ }
+ .profile-info .profile-details .name{
+    font-weight: bold;
+    font-size: 10px;
+ }
+ .profile-info .profile-details .status{
+    font-weight: lighter;
+    font-size: 5px;
+    opacity: .5;
+ }
+ .chat-section{
+    padding: .5rem;
+ }
+ .left-chat{
+    display: flex;
+    flex-direction: row;
+    max-width: 60%;
+    width: fit-content;
+    font-size: 8px;
+    padding: .8em;
+    position: relative;
+    background-color: hsl(277, 36%, 88%);
+    color: hsl(276, 55%, 52%);
+    margin-bottom: 2%;
+    border-radius: 10px;
+ }
+ .right-chat-section{
+    margin: 2% 0;
+ }
+.right-chat{
+    display: flex;
+    flex-direction: row;
+    max-width: 60%;
+    width: fit-content;
+    font-size: 8px;
+    padding: .8em;
+    position: relative;
+    margin-left: auto;
+    background-color: white;
+    color: hsl(271, 15%, 43%);
+    margin-bottom: 2%;
+    border-radius: 10px;
+}
+.right-chat.image{
+    background-color: transparent;
+    margin-bottom: 0;
+}
+.right-chat img{
+    width: 25%;
+    margin-left: auto;
+    border-radius: 20%;
+}
+.rate-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    max-width: 100%;
+    background-image: linear-gradient( to right, hsl(293, 100%, 63%),hsl(264, 100%, 61%)80%);
+}
+.rate-card .circle{
+    width: 1em;
+    height: 1em;
+    border-radius: 100%;
+    border: 1px solid hsl(289, 100%, 72%);
+    background-color: transparent;
+    margin-right: 1em;
+}
+.rate-card p{
+    margin-right: 9em;
+}
+.rate-card span{
+    font-size: 8px;
+    font-weight: bolder;
+}
+.message-section{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: .2rem 1.5rem;
+    padding-right: .5rem;
+    border-radius: 6666px;
+    margin-bottom: .5em;
+}
+.message-section input{
+    border: none;
+    font-size: 10px;
+
+}
+.message-section input:focus{
+    border: none;
+    outline: none;
+}
+.message-section input::placeholder{
+    color: hsl(271, 15%, 43%);
+    opacity: .3;
+}
+.message-section button{
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color:hsl(271, 36%, 24%) ;
+}
+.message-section button i{
+    color: white;
+}
+.booking{
+    position: absolute;
+    width: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translate(1%, -50%);
+}
+.booking h2{
+    color: hsl(271, 36%, 24%);
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 2%;
+}
+.booking p{
+    font-size: 16px;
+    color: hsl(270, 7%, 64%);
+}
+
+@media (max-width: 768px) {
+    body{
+        height: 100vh;
+        width: 100%;
+        overflow: none;
+    }
+    .background-left{
+        width: 60vw;
+        height: 80vh;
+
+    }
+    .phone{
+        width: 270px;
+        height: fit-content;
+    }
+    .booking{
+        position: relative;
+        width: 90%;
+        height: 160vh;
+        top: 180vh;
+        left: 0;
+        text-align: center;
+    }
+}
